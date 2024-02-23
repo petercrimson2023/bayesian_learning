@@ -248,3 +248,10 @@ ggplot(temp_frame,aes(x=x,y=estimated_y)) +
   geom_point(aes(x=x,y=true_y),color="red") + 
   geom_line(color="blue")+
   theme_minimal()
+
+saving_ggplot = ggplot(temp_frame,aes(x=x,y=estimated_y)) + 
+  geom_point(aes(x=x,y=true_y),color="red") + 
+  geom_line(color="blue")
+
+ggsave("model_average_result.png",saving_ggplot)
+
